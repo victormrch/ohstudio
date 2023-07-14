@@ -1,9 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { switchRoutes } from './routes';
-import { HomeScene } from '../../scenes/home.scene';
-import { ProfileScene } from '../../scenes/profile.scene';
-import { ContactScene } from '../../scenes/contact.scene';
+import { ContactScene, HomeScene, ProfileScene } from '../../scenes';
 
 interface RouterProps {
 	children?: React.ReactNode;
