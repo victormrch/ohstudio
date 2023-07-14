@@ -1,6 +1,8 @@
 # OhStudio website
-This project is a challenge from the FrontendPractice website. 
+
+This project is a challenge from the FrontendPractice website.
 Basically, this project delves into the following aspects:
+
 - Minimal design.
 - Scroll animations.
 - Hover effects.
@@ -17,7 +19,6 @@ Here is the link to the challenge:
 - `npm run format` - Running prettier and format all the files in the app.
 - `npm run lint` - Running lint in the project and fix lint errors.
 - `npm run test` - Running test with jest.
-
 
 ## Technologies used in the project
 
@@ -38,21 +39,10 @@ I have followed a pod architecture where it is broken into layout, scenes and po
 - core: transversal components such as, store, router, theme.
 - layout: master pages.
 - pods: components grouped by domain.
-- scenes: pages of the application, a scene can be composed of a layout and one or more pods. 
+- scenes: pages of the application, a scene can be composed of a layout and one or more pods.
 
 ## Structure and component of the application
 
-
-
 ## TODOs
 
-
-
-##  Improvements in the application
-
-
-
-
-
-
-
+## Improvements in the application

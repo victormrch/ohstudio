@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders Hello React heading', () => {
 	render(<App />);
-	const headingElement = screen.getByRole('heading', {name: 'Hello React!'});
+	const headingElement = screen.getByRole('heading', { name: 'Hello React!' });
 	expect(headingElement).toBeInTheDocument();
 });
