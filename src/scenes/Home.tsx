@@ -1,13 +1,9 @@
-import { switchRoutes } from '../core/router/routes';
-import { Link } from 'react-router-dom';
+import { AppLayout } from '../layout';
 
 export const HomeScene: React.FC = () => {
 	return (
-		<div>
+		<AppLayout>
 			<h1>Home Scene</h1>
-			<Link to={switchRoutes.profile}>Profile</Link>
-            <br />
-			<Link to={switchRoutes.contact}>Contact</Link>
-		</div>
+		</AppLayout>
 	);
 };
