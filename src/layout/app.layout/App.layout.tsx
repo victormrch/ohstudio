@@ -1,3 +1,4 @@
+import { Footer } from '../../common-app/components/Footer';
 import { Navbar } from '../../common-app/components/Navbar';
 import { AppLayoutContainer } from './App.layout.style';
 
@@ -9,6 +10,7 @@ export const AppLayout: React.FC<IAppLayoutProps> = ({ children }) => {
 		<AppLayoutContainer>
 			<Navbar />
 			{children}
+			<Footer />
 		</AppLayoutContainer>
 	);
 };
