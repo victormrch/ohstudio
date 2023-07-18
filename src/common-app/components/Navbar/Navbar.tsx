@@ -1,11 +1,13 @@
 import { useLocation } from 'react-router-dom';
-import { switchRoutes } from '../../../core/router';
+
 import {
 	NavBarContainer,
 	NavBarLink,
 	NavBarLinkContainer,
 	NavBarItemsContainer,
 } from './Navbar.style';
+
+import { switchRoutes } from '../../../core/router';
 
 export const Navbar: React.FC = () => {
 	const location = useLocation();
@@ -14,7 +16,6 @@ export const Navbar: React.FC = () => {
 		{ label: 'Profile', path: switchRoutes.profile },
 		{ label: 'Contact', path: switchRoutes.contact },
 	];
-
 	return (
 		<NavBarContainer>
 			<NavBarItemsContainer>

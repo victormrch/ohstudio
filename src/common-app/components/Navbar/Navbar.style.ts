@@ -9,7 +9,7 @@ interface Props {
 	active: boolean;
 }
 
-export const NavBarContainer = styled.ul`
+export const NavBarContainer = styled.nav`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,7 +20,7 @@ export const NavBarContainer = styled.ul`
 	padding: 1.875rem 2.4rem;
 `;
 
-export const NavBarItemsContainer = styled.div`
+export const NavBarItemsContainer = styled.ul`
 	background-color: ${fontQuaternaryColor};
 	display: flex;
 	justify-content: center;
