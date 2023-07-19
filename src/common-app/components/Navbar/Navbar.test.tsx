@@ -1,41 +1,37 @@
 import { render, screen } from '@testing-library/react';
 import { Navbar } from './Navbar';
-import { useLocation } from 'react-router-dom';
-
-jest.mock('react-router-dom', () => ({
-	...jest.requireActual('react-router-dom'),
-	useLocation: jest.fn(),
-}));
+import { BrowserRouter } from 'react-router-dom';
 
 describe('AppNavbar should render all links correctly', () => {
-	afterEach(() => {
-		jest.clearAllMocks();
-	});
-	it('should render Home link', () => {
-		(useLocation as jest.Mock).mockReturnValue({ pathname: '/' });
-		render(<Navbar />);
-		const homeLink = screen.getByRole('link', {
-			name: /home/i,
-		});
+	it('renders all nav links', () => {
+		render(
+			<BrowserRouter>
+				<Navbar />
+			</BrowserRouter>,
+		);
 
-		expect(homeLink).toBeVisible();
-	});
-	it('should render Profile link', () => {
-		(useLocation as jest.Mock).mockReturnValue({ pathname: '/profile' });
-		render(<Navbar />);
-		const homeLink = screen.getByRole('link', {
-			name: /profile/i,
-		});
+		const homeLink = screen.getByText('Home');
+		const profileLink = screen.getByText('Profile');
+		const contactLink = screen.getByText('Contact');
 
-		expect(homeLink).toBeVisible();
+		expect(homeLink).toBeInTheDocument();
+		expect(profileLink).toBeInTheDocument();
+		expect(contactLink).toBeInTheDocument();
 	});
-	it('should render Contact link', () => {
-		(useLocation as jest.Mock).mockReturnValue({ pathname: '/contact' });
-		render(<Navbar />);
-		const ContactLink = screen.getByRole('link', {
-			name: /contact/i,
-		});
 
-		expect(ContactLink).toBeVisible();
+	test('renders correct link paths', () => {
+		render(
+			<BrowserRouter>
+				<Navbar />
+			</BrowserRouter>,
+		);
+
+		const homeLink = screen.getByText('Home');
+		const profileLink = screen.getByText('Profile');
+		const contactLink = screen.getByText('Contact');
+
+		expect(homeLink.getAttribute('href')).toBe('/');
+		expect(profileLink.getAttribute('href')).toBe('/profile');
+		expect(contactLink.getAttribute('href')).toBe('/contact');
 	});
 });

@@ -1,13 +1,10 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import {
 	fontPrimaryColor,
 	fontQuaternaryColor,
 	fontSecondaryColor,
 } from '../../../core/theme/app.style';
-
-interface Props {
-	active: boolean;
-}
 
 export const NavBarContainer = styled.nav`
 	display: flex;
@@ -31,23 +28,19 @@ export const NavBarItemsContainer = styled.ul`
 	padding: 4px;
 `;
 
-export const NavBarLinkContainer = styled.li<Props>`
+export const NavBarLinkContainer = styled(NavLink)`
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 40px;
 	width: 90px;
-
-	${props =>
-		props.active &&
-		`border-radius: 100px;
-		background-color: ${fontPrimaryColor}; 
-		transition: all 0.5s ease;
-		`}
-`;
-
-export const NavBarLink = styled.a`
+	text-decoration: none;
 	font-size: 14px;
 	color: ${fontSecondaryColor};
-	text-decoration: none;
+
+	&.active {
+		border-radius: 100px;
+		background-color: ${fontPrimaryColor};
+		transition: all 0.5s ease;
+	}
 `;

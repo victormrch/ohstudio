@@ -1,7 +1,16 @@
-import { createRoot } from 'react-dom/client';
-import App from './App';
+import ReactDOM from 'react-dom/client';
 
-const container = document.getElementById('root') as HTMLElement;
-const root = createRoot(container);
+import './index.css';
 
-root.render(<App />);
+import { GlobalStyle } from './core/theme/app.style';
+import { AppRouter } from './core/router';
+import { App } from './App';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+	<>
+		<GlobalStyle />
+		<AppRouter>
+			<App />
+		</AppRouter>
+	</>,
+);

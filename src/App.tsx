@@ -1,13 +1,7 @@
-import { AppRouter } from './core/router';
-import { GlobalStyle } from './core/theme/app.style';
-
-const App: React.FC = () => {
+export const App: React.FC = () => {
 	return (
-		<>
-			<GlobalStyle />
-			<AppRouter />
-		</>
+		<div>
+			<h1>Hello React!</h1>
+		</div>
 	);
 };
-
-export default App;
