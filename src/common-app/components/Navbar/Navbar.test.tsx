@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import { Navbar } from './Navbar';
 import { BrowserRouter } from 'react-router-dom';
 
-describe('AppNavbar should render all links correctly', () => {
-	it('renders all nav links', () => {
+describe('Navbar component', () => {
+	it('should renders all nav links', () => {
 		render(
 			<BrowserRouter>
 				<Navbar />
@@ -19,7 +19,7 @@ describe('AppNavbar should render all links correctly', () => {
 		expect(contactLink).toBeInTheDocument();
 	});
 
-	test('renders correct link paths', () => {
+	test('should render correctly all link paths', () => {
 		render(
 			<BrowserRouter>
 				<Navbar />

@@ -1,9 +1,10 @@
 import { AppLayout } from '../layout';
+import { ContactSection } from '../pods/ContactSection';
 
 export const ContactScene: React.FC = () => {
 	return (
 		<AppLayout>
-			<h1>Contact Scene</h1>
+			<ContactSection />
 		</AppLayout>
 	);
 };

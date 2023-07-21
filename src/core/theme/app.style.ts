@@ -14,6 +14,7 @@ const fontTerciaryColor = '#7f7f7f';
 const fontQuaternaryColor = '#e8e5e480';
 
 /* Responsive BreakPoint */
+const desktopBreakPoint = '75rem';
 const tabletBreakPoint = '50rem';
 const mobileBreakPoint = '30rem';
 
@@ -23,6 +24,7 @@ export {
 	fontSecondaryColor,
 	fontTerciaryColor,
 	fontQuaternaryColor,
+	desktopBreakPoint,
 	tabletBreakPoint,
 	mobileBreakPoint,
 };

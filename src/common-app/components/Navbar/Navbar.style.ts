@@ -14,7 +14,7 @@ export const NavBarContainer = styled.nav`
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	padding: 1.875rem 2.4rem;
+	padding: 0.625rem;
 `;
 
 export const NavBarItemsContainer = styled.ul`
@@ -22,24 +22,24 @@ export const NavBarItemsContainer = styled.ul`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: 100px;
+	border-radius: 6.25rem;
 	backdrop-filter: blur(16px);
-	width: 273px;
-	padding: 4px;
+	width: 17.063rem;
+	padding: 0.25rem;
 `;
 
 export const NavBarLinkContainer = styled(NavLink)`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 40px;
-	width: 90px;
+	height: 2.5rem;
+	width: 5.625rem;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 0.875rem;
 	color: ${fontSecondaryColor};
 
 	&.active {
-		border-radius: 100px;
+		border-radius: 6.25rem;
 		background-color: ${fontPrimaryColor};
 		transition: all 0.5s ease;
 	}
